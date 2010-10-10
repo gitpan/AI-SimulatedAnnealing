@@ -1,6 +1,12 @@
 #!/usr/bin/perl
 
+####
 # annealing_tests.t:  Test the AI::SimulatedAnnealing module.
+#
+# Usage:
+#
+#     perl -w annealing_tests.t market_distances.csv
+####
 use 5.010001;
 use strict;
 use warnings;
@@ -72,6 +78,7 @@ if ($EVAL_ERROR) {
         }
         default {
             say STDERR $exception->get_message();
+            exit(1);
         } # end when
     } # end given
 } # end if
